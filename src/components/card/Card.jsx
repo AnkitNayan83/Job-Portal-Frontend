@@ -60,7 +60,7 @@ export const Card = ({ jobId, status, resume, date, appId }) => {
         <h3>Status: {status}</h3>
         <Link
           target="_blank"
-          to={`https://job-portal-backend-8js429dte-ankitnayan83.vercel.app/${resume}`}
+          to={`https://job-portal-backend-eight.vercel.app/${resume}`}
         >
           <span>view resume</span>
         </Link>
