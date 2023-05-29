@@ -35,7 +35,6 @@ export const Login = () => {
       }
     } catch (error) {
       dispatch(hideLoading());
-      console.log(error);
       toast.error("wrong email or password");
     }
   };
