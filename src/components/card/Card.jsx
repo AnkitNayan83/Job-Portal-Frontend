@@ -58,7 +58,10 @@ export const Card = ({ jobId, status, resume, date, appId }) => {
       </div>
       <div className="Cbottom">
         <h3>Status: {status}</h3>
-        <Link target="_blank" to={`http://localhost:8080/${resume}`}>
+        <Link
+          target="_blank"
+          to={`https://job-portal-backend-dmxdw3skr-ankitnayan83.vercel.app/${resume}`}
+        >
           <span>view resume</span>
         </Link>
         <button onClick={handelWithdraw}>Withdraw Application</button>
