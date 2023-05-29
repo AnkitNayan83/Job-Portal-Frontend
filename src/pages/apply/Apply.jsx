@@ -36,7 +36,7 @@ export const Apply = () => {
       formData.append("resume", resume);
       const res = await publicRequest.post(
         `/application/apply/${id}`,
-        // formData,
+        formData,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
