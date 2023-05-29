@@ -1,0 +1,140 @@
+@import "../../app.scss";
+.apply {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(233, 233, 233);
+  .apply_container {
+    height: calc(100vh - 60px);
+    max-width: 1024px;
+    box-shadow: 0 0 23.2715px rgba(0, 0, 0, 0.418);
+    background-color: white;
+    padding: 0 20px;
+    .loading {
+      width: 1000px;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      align-items: center;
+      justify-content: center;
+      .load_icon {
+        font-size: 25px;
+      }
+      p {
+        font-weight: 700;
+        font-size: 24px;
+      }
+    }
+    .apply_wrapper {
+      height: 96%;
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100%;
+      @include mobile {
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 40px;
+        gap: 30%;
+      }
+      .ap_top {
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 30px;
+        @include mobile {
+          justify-content: space-around;
+          width: 60%;
+          margin-bottom: 20px;
+          flex-direction: column;
+        }
+        .back_icon {
+          font-size: 25px;
+          @include mobile {
+            font-size: 15px;
+          }
+        }
+        .title {
+          font-size: 24px;
+          @include mobile {
+            font-size: 15px;
+          }
+        }
+      }
+      .ap_middle {
+        display: flex;
+        align-items: center;
+        @include mobile {
+          flex-direction: column;
+        }
+        .left {
+          flex: 1;
+          display: flex;
+          align-items: flex-start;
+          flex-direction: column;
+          gap: 40px;
+          @include mobile {
+            gap: 20px;
+          }
+          .name {
+            text-transform: capitalize;
+            font-size: 20px;
+            @include mobile {
+              font-size: 15px;
+            }
+          }
+          .email {
+            font-size: 20px;
+            @include mobile {
+              font-size: 15px;
+            }
+          }
+          .upload-res {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 20px;
+            @include mobile {
+              font-size: 15px;
+            }
+          }
+        }
+        .right {
+          @include mobile {
+            display: none;
+          }
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 20px;
+          h3 {
+            font-size: 24px;
+          }
+
+          img {
+            width: 100%;
+          }
+        }
+      }
+      .ap_bottom {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        button {
+          color: white;
+          background-color: black;
+          border: none;
+          border-radius: 10px;
+          cursor: pointer;
+          padding: 10px;
+        }
+      }
+    }
+  }
+}

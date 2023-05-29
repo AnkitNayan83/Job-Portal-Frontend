@@ -1,0 +1,41 @@
+@import "../../app.scss";
+
+.applications {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .applications_container {
+    max-width: 1024px;
+    min-height: calc(100vh - 60px);
+    .loading {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      align-items: center;
+      justify-content: center;
+      .load_icon {
+        font-size: 25px;
+      }
+      p {
+        font-weight: 700;
+        font-size: 24px;
+      }
+    }
+    .Awrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      padding: 0 10px;
+      @include mobile {
+        padding: 0 20px;
+      }
+      .Ahead {
+        margin-top: 1rem;
+      }
+    }
+  }
+}

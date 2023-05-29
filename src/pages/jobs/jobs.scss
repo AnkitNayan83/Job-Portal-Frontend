@@ -1,0 +1,158 @@
+@import "../../app.scss";
+.jobs {
+  .jobs_container {
+    min-height: calc(100vh - 60px);
+    display: flex;
+    background-color: rgb(245, 245, 245);
+
+    @include mobile {
+      flex-direction: column;
+    }
+
+    .Jleft {
+      flex: 1;
+      .filterBox {
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        flex-direction: column;
+        position: sticky;
+        z-index: 3;
+        top: 10px;
+        .Fcontainer {
+          width: 80%;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 30px;
+          padding: 30px;
+          border-radius: 10px;
+          box-shadow: 0 0 23.2715px rgba(0, 0, 0, 0.418);
+          top: 10px;
+          background-color: white;
+
+          .fil1 {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+            label {
+              font-size: 18px;
+              font-weight: 600;
+            }
+
+            input {
+              padding: 10px;
+              font-size: 20px;
+              width: 90%;
+              border-radius: 5px;
+              border: 1px solid rgb(196, 196, 196);
+            }
+          }
+          .fil2 {
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            gap: 5px;
+            margin-top: 10px;
+            width: 100%;
+            .country {
+              background-color: white;
+              border-radius: 5px;
+              @include mobile {
+                width: 100%;
+              }
+            }
+          }
+
+          .fill-btns {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            .fil-btn {
+              padding: 10px;
+              background-color: black;
+              color: white;
+              border-radius: 10px;
+              border: none;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+    .Jright {
+      flex: 2;
+
+      .loading {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        align-items: center;
+        justify-content: center;
+
+        .load_icon {
+          font-size: 25px;
+        }
+
+        p {
+          font-weight: 700;
+          font-size: 24px;
+        }
+      }
+
+      .right_container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        padding: 10px;
+        margin-top: 10px;
+
+        .no-post {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 10px;
+          margin-top: 30px;
+
+          img {
+            width: 80%;
+          }
+          h4 {
+            font-size: 20px;
+            font-weight: 600;
+          }
+        }
+
+        .job_pages {
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          width: 100%;
+
+          .load-btn {
+            border: none;
+            border-radius: 10px;
+            color: white;
+            background-color: #333;
+            padding: 7px 25px;
+            cursor: pointer;
+            font-size: 16px;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+          .disabled {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

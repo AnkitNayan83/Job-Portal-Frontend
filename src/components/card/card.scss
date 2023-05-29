@@ -1,0 +1,47 @@
+@import "../../app.scss";
+.card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 0 0 23.2715px rgba(0, 0, 0, 0.418);
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+
+  .Ctop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include mobile {
+      font-size: 15px;
+    }
+  }
+  .Cmid {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .Cbottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    button {
+      padding: 10px;
+      color: white;
+      background-color: black;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    h3 {
+      font-size: 24px;
+    }
+    span {
+      font-size: 20px;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+}

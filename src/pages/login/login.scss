@@ -1,0 +1,151 @@
+@import "../../app.scss";
+.login {
+  overflow: hidden;
+  .loading {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+
+    .load_icon {
+      font-size: 25px;
+    }
+
+    p {
+      font-weight: 700;
+      font-size: 24px;
+    }
+  }
+  .login_container {
+    height: calc(100vh - 60px);
+    .Lwrapper {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      .Lleft {
+        @include mobile {
+          display: none;
+        }
+        height: 100%;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        p {
+          font-size: 40px;
+          margin-bottom: -60px;
+          z-index: 2;
+        }
+        img {
+          height: 80%;
+          width: 80%;
+        }
+      }
+      .Lright {
+        height: 100%;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        @include mobile {
+          justify-content: flex-start;
+          margin-top: 8rem;
+        }
+        gap: 20px;
+        h2 {
+          font-weight: bold;
+          font-size: 34px;
+          margin-bottom: 20px;
+        }
+        form {
+          width: 70%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          border-radius: 10px;
+          box-shadow: 0 0 23.2715px rgba(0, 0, 0, 0.418);
+
+          @include mobile {
+            width: 90%;
+          }
+
+          .f1 {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+            width: 80%;
+
+            label {
+              font-size: 16px;
+              color: gray;
+              font-weight: 700;
+            }
+
+            input {
+              width: 100%;
+              padding: 10px;
+              border-radius: 5px;
+              border: none;
+              outline: none;
+              background-color: rgba(173, 216, 230, 0.379);
+            }
+          }
+          .Finfo {
+            width: 80%;
+            display: flex;
+            align-items: center;
+            margin-top: 30px;
+            justify-content: space-between;
+            .Fsave {
+              display: flex;
+              align-items: center;
+              gap: 5px;
+              input {
+                cursor: pointer;
+              }
+              label {
+                cursor: pointer;
+                font-weight: 700;
+              }
+            }
+            .Ffog {
+              font-weight: 700;
+              color: red;
+            }
+          }
+          .Fbutton {
+            margin-top: 30px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.651);
+            border: none;
+            font-weight: 700;
+            cursor: pointer;
+            padding: 10px;
+            width: 80%;
+            border-radius: 5px;
+            margin-bottom: 20px;
+
+            &:hover {
+              background-color: black;
+            }
+          }
+          span {
+            margin-bottom: 20px;
+            font-weight: 600;
+            strong {
+              color: blue;
+              text-decoration: underline;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+}
