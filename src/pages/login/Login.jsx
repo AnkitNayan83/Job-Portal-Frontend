@@ -19,7 +19,6 @@ export const Login = () => {
 
   const handelLogin = async (e) => {
     e.preventDefault();
-    console.log(email, password);
     try {
       if (!email || !password) return toast.error("please enter all field");
       dispatch(showLoading());
